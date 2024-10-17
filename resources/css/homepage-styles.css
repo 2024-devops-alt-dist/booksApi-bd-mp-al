@@ -67,6 +67,7 @@ h2 {
     align-items: center;
     scroll-snap-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
 .card2 {
@@ -75,6 +76,7 @@ h2 {
 
 .card3 {
     background-color: var(--white-typo);
+    margin-right: 2rem;
 }
 
 .card-content {
@@ -117,6 +119,7 @@ h2 {
     color: var(--black-typo);
 }
 
+
 .month-card {
     display: flex;
     flex-direction: column;
@@ -124,6 +127,10 @@ h2 {
     flex-shrink: 0;
     width: 7.12rem;
     height: 12.12rem;
+}
+
+.last-month-card {
+    margin-right: 2rem;
 }
 
 .image-container {
