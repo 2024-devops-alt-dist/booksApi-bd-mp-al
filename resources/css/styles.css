@@ -1,0 +1,33 @@
+:root {
+    /* colors */
+    --primary-color: #6640BD;
+    --secondary-color: #FFC029;
+    --third-color: #F3EEFF;
+    --white-typo: #EDE8F7;
+    --black-typo: #232226;
+    --grey-typo: #C6C5CB;
+
+    /* fonts */
+    --jua-font: "jua";
+    --roboto-font: "Roboto";
+    --inter-font: "Inter";
+    font-size: 16px;
+
+    @font-face {
+        font-family: "Inter";
+            src: url("resources/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format('truetype');
+    }
+    
+    .card-text-font {
+        font-family: var(--roboto-font);
+        font-size: 0,875rem;
+        font-weight: medium;
+        color: var(--_card-text-font, --grey-typo);
+    }
+    
+    .card-title-font {
+        font-family: var(--inter-font);
+        font-size: 1.25rem;
+        color: var(--_card-title-font, var(--black-typo));
+    }
+}
