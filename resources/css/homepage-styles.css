@@ -1,0 +1,276 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.62rem 0; 
+    list-style: none;
+}
+
+.navbar-list li {
+    flex: 1; 
+    text-align: center; 
+}
+
+.navbar-list img {
+    width: 2.5rem; 
+    height: auto; 
+}
+
+.search-icon {
+    position: fixed;
+    top: 1rem; 
+    right: 1rem; 
+    z-index: 1000; 
+}
+
+.search-icon img {
+    width: 30px; 
+    height: auto; 
+}
+
+h2 {
+    font-family: var(--inter-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    margin-left: 2rem;
+   
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex-shrink: 0;
+    width: 19.37rem;
+    height: 10rem;
+    background-color: rgba(102, 64, 189, 0.45);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+    background-color: var(--secondary-color);
+}
+
+.card3 {
+    background-color: var(--white-typo);
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 80%;
+    max-width: 100px;
+}
+
+.text {
+    flex: 2;
+    padding-left: 10px;
+}
+
+.text h3 {
+    margin-bottom: 0.1rem;
+    font-size: 1.5rem;
+    font-family: var(--inter-font);
+    color: var(--white-typo);
+}
+
+.text p {
+    font-size: 1rem;
+    color: var(--white-typo);
+}
+
+.card3 .text h3,
+.card3 .text p {
+    color: var(--black-typo);
+}
+
+.month-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    flex-shrink: 0;
+    width: 7.12rem;
+    height: 12.12rem;
+}
+
+.image-container {
+    width: 100%; 
+    height: 8.75rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.month-name {
+    margin-top: 0.5rem; 
+    color: var(--black-typo); 
+    font-size: 1rem; 
+    font-family: var(--inter-font);
+    font-weight: bold;
+    text-align: center; 
+}
+
+.category-container {
+    display: flex;                  
+    justify-content: center;        
+    align-items: center;  
+    margin-bottom: 2rem;          
+}
+
+.category-card {
+    flex-shrink: 0;
+    width: 80%;
+    height: 7.5rem;
+    background-color: var(--third-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card-content {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.category-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-icon img {
+    width: 80%;
+    max-width: 100px;
+}
+
+.category-text {
+    flex: 2;
+    padding-left: 10px;
+}
+
+.category-text h3 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-family: var(--jua-font);
+    color: var(--primary-color);
+}
+
+.category-text p {
+    font-family: var(--roboto-font);
+    font-size: 0.88rem;
+    color: var(--grey-typo);
+    max-width: 12.19rem;
+    margin-top: 0.1rem;
+}
+
+.category-section {
+margin-bottom: 8rem;
+}
+
+/* Media query pour les écrans tablette ou smartphone */
+@media only screen and (max-width: 768px) {
+    
+    nav.desktop-navbar {
+        display: none;
+    }
+
+    .banner {
+        display: none;
+    }
+}
+
+/* Media query pour les écrans d'ordinateurs */
+@media (min-width: 1024px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .search-icon {
+        display: none;
+    }
+}
+
+.desktop-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.62rem 1.25rem;
+    background-color: rgba(102, 64, 189, 0.45);
+    font-family: var(--inter-font);
+    color: var(--primary-color);
+}
+
+.navbar-list {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+}
+
+.navbar-left .navbar-logo {
+    width: 50px; 
+}
+
+.navbar-right .navbar-user-icon {
+    width: 50px; 
+}
+
+.banner {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
