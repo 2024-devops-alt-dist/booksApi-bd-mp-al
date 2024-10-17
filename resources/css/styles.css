@@ -13,21 +13,34 @@
     --inter-font: "Inter";
     font-size: 16px;
 
-    @font-face {
-        font-family: "Inter";
-            src: url("resources/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format('truetype');
+    /* dimensions */
+    --button-border-radius: 2.1875rem;
+    --card-border-radius: .9375rem;
+    --app-icon-border-radius: 1.25rem;
+
+    /* global properties */
+    html, body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
     
     .card-text-font {
         font-family: var(--roboto-font);
-        font-size: 0,875rem;
-        font-weight: medium;
+        font-size: 0.875rem;
+        font-weight: normal;
         color: var(--_card-text-font, --grey-typo);
     }
     
     .card-title-font {
-        font-family: var(--inter-font);
+        font-family: var(--_card-title-font, --jua-font);
         font-size: 1.25rem;
-        color: var(--_card-title-font, var(--black-typo));
+        color: var(--_card-title-color, var(--black-typo));
+    }
+
+    .button-title-font {
+        font-family: var(--inter-font);
+        font-size: 1rem;
+        color: var(--_button-title-font, var(--primary-color));
     }
 }

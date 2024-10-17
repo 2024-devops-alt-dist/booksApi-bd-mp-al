@@ -1,0 +1,7 @@
+.simple-button {
+    width: var(--_simple-button-width, 3.125rem);
+    height: var(--_simple-button-height, 3.125rem);
+    border-radius: var(--_button-border-radius, var(--button-border-radius));
+    background-color: var(--_button-bg-color, var(--primary-color));
+    opacity: .75;
+}

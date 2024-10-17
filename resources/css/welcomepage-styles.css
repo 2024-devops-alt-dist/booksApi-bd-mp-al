@@ -1,0 +1,135 @@
+.welcompage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+    /* welcome page's header */
+    .icon-title-container {
+        position: absolute;
+        top: 27.5%;
+        z-index: 1;
+        height: 6.25rem;
+        width: 100%;
+        padding-left: 1.25rem;
+        
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        
+        .main-title {
+            --_card-title-color: var(--primary-color);
+            --_card-title-font: var(--inter-font);
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 4rem;
+            height: auto;
+            background-color: var(--primary-color);
+            border-radius: var(--app-icon-border-radius);
+        }
+        
+    }
+
+    /* main content of welcome page */
+    .main-welcome {
+        width: 100%;
+        height: 100%;
+
+        /* background top of welcome page*/
+        .bg-welcome-icons {
+            width: 100%;
+            height: 70%;
+            padding: 3rem 0;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            gap: .7rem;
+            
+            & > * {
+                width: calc(100%/4);
+                max-width: 70px;
+                height: 50px;
+            }
+
+            
+            .icon1 {
+                margin-left: auto;
+                background: url(/resources/media/icons/icons8-book-50.png) no-repeat;
+            }
+            
+            .icon2 { background: url(/resources/media/icons/icons8-board-64.png); }
+            .icon3 { background: url(/resources/media/icons/icons8-business-75.png); }
+            .icon4 {background: url(/resources/media/icons/icons8-trophy-100.png); }
+            .icon5 {
+                background: url(/resources/media/icons/icons8-degree-100.png);
+                margin-right: auto;
+            }
+            .icon6 { background: url(/resources/media/icons/icons8-truck-100.png); }
+            .icon7 { background: url(/resources/media/icons/icons8-windmill-60.png); }
+            .icon8 { background: url(/resources/media/icons/icons8-fire-shovel-96.png); }
+
+            .placeholder-bg-icon {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .icon4,
+            .icon5 {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* connexion section */
+        .connexion-container {
+            width: 100%;
+            height: 30%;
+
+            & > * {
+                margin: .625rem auto 0;
+            }
+
+            .login,
+            .login-with,
+            .signup {
+                --_simple-button-width: 80%;
+                max-width: 18rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+            }
+
+            .login h2 {
+                --_button-title-font: var(--third-color);
+            }
+
+            .login-with {
+                --_button-bg-color: var(--third-color);
+                flex-direction: row-reverse;
+            }
+
+            .signup {
+                --_button-bg-color: transparent;
+                --_button-border-radius: 0;
+                border-top: 1px solid var(--primary-color);
+            }
+        
+            /* svg icon properties */
+            path[d] {
+                fill: var(--primary-color);
+            }
+            
+            .login-with svg,
+            .signup svg {
+                width: 1.35rem;
+                height: 1.35rem;
+            }
+        }
+    }
+}
+

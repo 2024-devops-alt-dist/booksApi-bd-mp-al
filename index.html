@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliomaniac</title>
 
+    <!-- styles -->
     <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="/resources/css/welcomepage-styles.css">
+    <link rel="stylesheet" href="/resources/css/button-styles.css">
+
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,10 +22,41 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="page-container welcompage">
+    <header class="icon-title-container">
+        <h1 class="main-title card-title-font">Reading Programs.</h1>
+        <img src="/resources/media/icons/icons8-owl-96.png" alt="app icon represented by a owl">
+    </header>
 
-    <h1 class="card-title-font">Salut</h1>
+    <main class="main-welcome">
+        <header class="bg-welcome-icons">
+            <div class="placeholder-bg-icon icon1"></div>
+            <div class="placeholder-bg-icon icon2"></div>
+            <div class="placeholder-bg-icon icon3"></div>
+            <div class="placeholder-bg-icon icon4"></div>
+            <div class="placeholder-bg-icon icon5"></div>
+            <div class="placeholder-bg-icon icon6"></div>
+            <div class="placeholder-bg-icon icon7"></div>
+            <div class="placeholder-bg-icon icon8"></div>
+        </header>
 
+        <footer class="connexion-container">
+            <article class="simple-button login"><h2 class="button-title-font">Login</h2></article>
+            <article class="simple-button login-with">
+                <h2 class="button-title-font">Login with Facebook</h2>
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.7587 10.3785C21.7587 15.0726 17.8232 18.9641 12.6856 19.6703V13.1155H15.1837L15.6593 10.4036H12.6856V8.64399C12.6856 7.90174 13.1012 7.17908 14.4322 7.17908H15.7837V4.87004C15.7837 4.87004 14.5567 4.68663 13.3843 4.68663C10.9355 4.68663 9.33585 5.98537 9.33585 8.33596V10.4028H6.61392V13.1147H9.33585V19.6696C4.19921 18.9626 0.262756 15.0718 0.262756 10.3785C0.262756 5.18434 5.07517 0.973038 11.0107 0.973038C16.9463 0.973038 21.7587 5.18356 21.7587 10.3785Z"/>
+                </svg>                    
+            </article>
+            <article class="simple-button signup">
+                <h2 class="button-title-font">Sign up</h2>
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#6640BD" d="M1.66669 9.5H20.3334M20.3334 9.5L11 2.20833M20.3334 9.5L11 16.7917"/>
+                </svg>
+                    
+            </article>
+        </footer>
+    </main>
     <script src="resources/js/script.js"></script>
 </body>
 
