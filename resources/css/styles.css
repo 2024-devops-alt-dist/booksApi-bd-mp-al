@@ -8,15 +8,10 @@
     --grey-typo: #C6C5CB;
 
     /* fonts */
-    --jua-font: "jua";
+    --jua-font: "Jua";
     --roboto-font: "Roboto";
     --inter-font: "Inter";
     font-size: 16px;
-
-    @font-face {
-        font-family: "Inter";
-            src: url("resources/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format('truetype');
-    }
     
     .card-text-font {
         font-family: var(--roboto-font);
@@ -26,7 +21,7 @@
     }
     
     .card-title-font {
-        font-family: var(--inter-font);
+        font-family: var(--jua-font);
         font-size: 1.25rem;
         color: var(--_card-title-font, var(--black-typo));
     }
