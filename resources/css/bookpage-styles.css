@@ -1,0 +1,19 @@
+.bookpage {
+    width: 100vw;
+    box-sizing: border-box;
+
+    .exit-button { --_exit-button-color: var(--primary-color); }
+
+    .banner-book {
+        margin: 6rem 0 0;
+        width: 100%;
+
+        img { width: 100%; }
+
+        .book-caption {
+            --_card-title-color: var(--primary-color);
+            --_card-title-font: var(--jua-font);
+            font-size: 1.125rem;
+        }
+    }
+}
