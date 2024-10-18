@@ -68,7 +68,7 @@
             .icon3 { background-image: url(/resources/media/icons/icons8-business-48.png); }
             .icon4 {
                 top: calc(50%/4);
-                left: calc(33%/4);
+                left: calc(50%/4);
                 background-image: url(/resources/media/icons/icons8-trophy-100.png);
             }
             .icon5 {
@@ -99,57 +99,57 @@
             }
 
         }
+    }
+}
 
-        /* connexion section */
-        .connexion-container {
-            width: 100%;
-            height: 27.5%;
-            max-height: 15rem;
+/* connexion section */
+.connexion-container {
+    width: 100%;
+    height: 27.5%;
+    max-height: 15rem;
 
-            & > * {
-                margin: .625rem auto 0;
-            }
+    & > * {
+        margin: .625rem auto 0;
+    }
 
-            .login,
-            .login-with,
-            .signup {
-                --_simple-button-width: 80%;
-                max-width: 20rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: .5rem;
+    .login,
+    .login-with,
+    .signup {
+        --_simple-button-width: 80%;
+        max-width: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
 
-                & > * { text-decoration: none; }
-            }
+        & > * { text-decoration: none; }
+    }
 
-            .login a {
-                --_button-title-font: var(--third-color);
-            }
+    .login a {
+        --_button-title-color: var(--third-color);
+    }
 
-            .login-with {
-                --_button-bg-color: transparent;
-                border: 1px var(--primary-color) solid;
-                flex-direction: row-reverse;
-            }
+    .login-with {
+        --_button-bg-color: transparent;
+        border: 1px var(--primary-color) solid;
+        flex-direction: row-reverse;
+    }
 
-            .signup {
-                --_button-bg-color: transparent;
-                --_button-border-radius: 0;
-                border-top: 1px solid var(--primary-color);
-            }
-        
-            /* svg icon properties */
-            path[d] {
-                fill: var(--primary-color);
-            }
-            
-            .login-with svg,
-            .signup svg {
-                width: 1.35rem;
-                height: 1.35rem;
-            }
-        }
+    .signup {
+        --_button-bg-color: transparent;
+        --_button-border-radius: 0;
+        border-top: 1px solid var(--primary-color);
+    }
+
+    /* svg icon properties */
+    path[d] {
+        fill: var(--primary-color);
+    }
+    
+    .login-with svg,
+    .signup svg {
+        width: 1.35rem;
+        height: 1.35rem;
     }
 }
 

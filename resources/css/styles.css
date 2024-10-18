@@ -3,7 +3,7 @@
     --primary-color: #6640BD;
     --secondary-color: #FFC029;
     --third-color: #F3EEFF;
-    --white-typo: #EDE8F7;
+    --white-typo: #F9F7FE;
     --black-typo: #232226;
     --grey-typo: #C6C5CB;
 
@@ -29,7 +29,7 @@
         font-family: var(--roboto-font);
         font-size: 0.875rem;
         font-weight: normal;
-        color: var(--_card-text-font, --grey-typo);
+        color: var(--_card-text-color, --grey-typo);
     }
     
     .card-title-font {
@@ -41,6 +41,6 @@
     .button-title-font {
         font-family: var(--inter-font);
         font-size: 1rem;
-        color: var(--_button-title-font, var(--primary-color));
+        color: var(--_button-title-color, var(--primary-color));
     }
 }
