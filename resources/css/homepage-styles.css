@@ -228,10 +228,14 @@ margin-bottom: 8rem;
     .banner {
         display: none;
     }
+
+    .footer {
+        display: none;
+    }
 }
 
 /* Media query pour les écrans d'ordinateurs */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
     .navbar {
         display: none;
@@ -240,6 +244,47 @@ margin-bottom: 8rem;
     .search-icon {
         display: none;
     }
+
+    h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .carousel {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        max-width: 90%;
+    }
+
+    .desktop-category-container {
+        display: flex;               /* Utiliser flexbox pour le conteneur de catégories */
+        justify-content: center;     /* Centre les catégories dans le conteneur */
+        flex-wrap: wrap; 
+        margin-right: 9%;
+        margin-left: 9%;
+        
+    }
+    
+    .category-card {
+        width: 20.56rem; 
+        height: 13.81rem;
+    }    
+
+    .card-m {
+        margin-right: 4rem;
+    }
+
+    .category-card {
+        transition: transform 0.3s ease; 
+    }
+    
+    .category-card:hover {
+        transform: scale(1.05); 
+    }
+
 }
 
 .desktop-navbar {
@@ -266,6 +311,18 @@ margin-bottom: 8rem;
     width: 50px; 
 }
 
+.navbar-list a {
+    text-decoration: none; 
+    color: var(--primary-color); 
+    font-family: var(--inter-font); 
+    font-size: 1rem; 
+    transition: color 0.3s; 
+}
+
+.navbar-list a:hover {
+    color: var(--white-typo);
+}
+
 .banner {
     width: 100%;
     height: 100%; 
@@ -280,4 +337,101 @@ margin-bottom: 8rem;
     object-fit: cover;
     margin: 0;
     padding: 0;
+}
+
+.search-box {
+    position: absolute; /* Positionnement absolu pour le placer dans le coin supérieur droit */
+    top: 10rem; /* Ajuste selon le besoin */
+    right: 5rem;
+    display: flex; /* Utiliser flexbox pour aligner l'icône et l'input */
+    align-items: center; /* Centre verticalement l'icône avec l'input */
+    border-radius: 35px; /* Coins arrondis */
+    padding: 0.5rem; /* Ajoute du padding autour de l'input et de l'icône */
+    width: 20rem; /* Largeur de la barre de recherche */
+    background-color: white;
+    
+}
+
+.icon-search {
+    max-width: 2rem; /* Ajuste la taille de l'icône selon tes besoins */
+    height: auto; /* Conserve le ratio de l'image */
+    margin-right: 0.5rem; /* Espace entre l'icône et l'input */
+}
+
+.input-search {
+    border: none; /* Supprime la bordure de l'input */
+    outline: none; /* Supprime la bordure par défaut au focus */
+    font-size: 1rem; /* Ajuste la taille de la police si nécessaire */
+    height: 3rem;
+    width: 15rem;
+    border-radius: 35px;
+
+}
+
+
+.footer {
+    padding: 2rem;                  
+    background-color: rgba(102, 64, 189, 0.45);
+}
+
+.footer-top {
+    display: flex;                   
+    justify-content: space-between;  
+    
+}
+
+.footer-column {
+    flex: 1;                       
+    margin: 0 5rem;                
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem; 
+    text-align: center;
+    font-family: var(--inter-font); 
+    font-size: 1.12rem;  
+    font-weight: bold;
+    color: var(--primary-color); 
+}
+
+.footer-column p {
+    font-family: var(--inter-font); 
+    font-size: 1.12rem;  
+    color: var(--primary-color);                   
+    line-height: 1.5;    
+    width: 16.31rem;          
+}
+
+.footer-line {
+    width: 82%;                     
+    height: 2px;                   
+    background-color: white;     
+    margin: 0.75rem auto; 
+}
+
+.footer-bottom {
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;           
+    width: 80%;                    
+    margin: 0 auto;                
+}
+
+.footer-bottom p {
+    flex: 4;                       
+    margin: 0;
+    font-family: var(--inter-font); 
+    font-size: 1.12rem;  
+    color: var(--primary-color);  
+                      
+}
+
+.footer-icons {
+    flex: 1;                        /* Prend 1/5 de l'espace */
+    display: flex;                 /* Utilise flexbox pour aligner les icônes */
+    justify-content: end;  /* Espace entre les icônes */
+}
+
+.footer-icons img {
+    margin-left: 2rem;
 }
