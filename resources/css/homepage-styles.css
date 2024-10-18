@@ -260,8 +260,8 @@ margin-bottom: 8rem;
     }
 
     .desktop-category-container {
-        display: flex;               /* Utiliser flexbox pour le conteneur de catégories */
-        justify-content: center;     /* Centre les catégories dans le conteneur */
+        display: flex;               
+        justify-content: center;     
         flex-wrap: wrap; 
         margin-right: 9%;
         margin-left: 9%;
@@ -340,28 +340,28 @@ margin-bottom: 8rem;
 }
 
 .search-box {
-    position: absolute; /* Positionnement absolu pour le placer dans le coin supérieur droit */
-    top: 10rem; /* Ajuste selon le besoin */
+    position: absolute; 
+    top: 10rem; 
     right: 5rem;
-    display: flex; /* Utiliser flexbox pour aligner l'icône et l'input */
-    align-items: center; /* Centre verticalement l'icône avec l'input */
-    border-radius: 35px; /* Coins arrondis */
-    padding: 0.5rem; /* Ajoute du padding autour de l'input et de l'icône */
-    width: 20rem; /* Largeur de la barre de recherche */
+    display: flex;
+    align-items: center; 
+    border-radius: 35px; 
+    padding: 0.5rem; 
+    width: 20rem; 
     background-color: white;
     
 }
 
 .icon-search {
-    max-width: 2rem; /* Ajuste la taille de l'icône selon tes besoins */
-    height: auto; /* Conserve le ratio de l'image */
-    margin-right: 0.5rem; /* Espace entre l'icône et l'input */
+    max-width: 2rem; 
+    height: auto; 
+    margin-right: 0.5rem; 
 }
 
 .input-search {
-    border: none; /* Supprime la bordure de l'input */
-    outline: none; /* Supprime la bordure par défaut au focus */
-    font-size: 1rem; /* Ajuste la taille de la police si nécessaire */
+    border: none; 
+    outline: none; 
+    font-size: 1rem; 
     height: 3rem;
     width: 15rem;
     border-radius: 35px;
@@ -431,9 +431,9 @@ margin-bottom: 8rem;
 }
 
 .footer-icons {
-    flex: 1;                        /* Prend 1/5 de l'espace */
-    display: flex;                 /* Utilise flexbox pour aligner les icônes */
-    justify-content: end;  /* Espace entre les icônes */
+    flex: 1;                        
+    display: flex;                 
+    justify-content: end;  
 }
 
 .footer-icons img {
