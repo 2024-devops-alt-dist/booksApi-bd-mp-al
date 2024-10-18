@@ -1,0 +1,128 @@
+.loginpage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/resources/media/images/pexels-inga-sv-3139361.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .5;
+    }
+
+    &::after { background-color: var(--primary-color); }
+    &::before { background-color: var(--white-typo); }
+
+    /* top page of login */
+    .top-loginpage {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1.25rem;
+        box-sizing: border-box;
+
+        .exit-button {
+            font-family: var(--roboto-font);
+            font-weight: bold;
+            font-size: 2rem;
+            text-decoration: none;
+            color: var(--third-color);
+            cursor: pointer;
+
+            position: absolute;
+            top: 5%;
+            right: 5%;
+        }
+
+        .main-title {
+            --_card-title-color: var(--third-color);
+            --_card-title-font: var(--inter-font);
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .card-text-font {
+            --_card-text-color: var(--third-color);
+            font-size: 1.75rem;
+            width: 90%;
+            margin: 1.25rem 0;
+        }
+
+        img {
+            width: 4rem;
+            height: auto;
+            background-color: var(--primary-color);
+            border-radius: var(--app-icon-border-radius);
+        }
+    }
+
+    /* user login form */
+    .login-form {
+        z-index: 2;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 5%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+
+        .user-infos {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: .625rem;
+
+            input {
+                height: 2.5rem;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid var(--white-typo);
+
+                &::placeholder {
+                    color: var(--third-color);
+                    font-family: var(--inter-font);
+                    font-weight: bold;
+                }
+            }
+
+            .forgot-pw {
+                font-size: .625rem;
+                text-decoration: none;
+                font-family: var(--inter-font);
+                color: var(--white-typo);
+                text-align: right;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+        }
+
+        .login,
+        .signup { --_simple-button-width: 100%; }
+        
+        .login {
+            --_button-bg-color: var(--white-typo);
+            a { --_button-title-color: var(--primary-color); }
+        }
+
+        .signup {
+            border-top: 1px solid var(--white-typo);
+            a { --_button-title-color: var(--white-typo); }
+        }
+    }
+}
