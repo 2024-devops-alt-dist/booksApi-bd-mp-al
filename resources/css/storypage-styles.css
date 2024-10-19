@@ -117,6 +117,63 @@
     object-fit: cover;
     border-radius: 15px;
 }
+
+.music-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0.70rem;
+}
+
+.music-card {
+    width: 23rem;
+    height: 18.5rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.music-card-image {
+    height: 9.25rem;
+    flex: 1 1 50%;
+    
+}
+
+.music-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-header h2 {
+    margin: 0 0 8px 0;
+}
+
+.text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.text-content p {
+    flex: 1;
+    margin: 0;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
 /* Media query pour les écrans tablette ou smartphone */
 @media only screen and (max-width: 768px) {
     
