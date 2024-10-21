@@ -285,6 +285,13 @@ margin-bottom: 8rem;
         transform: scale(1.05); 
     }
 
+    .category-card-content {
+        display: flex;
+        flex-direction: column; /* Arrange le contenu verticalement */
+        align-items: center; /* Centre tout le contenu horizontalement */
+        padding: 10px;
+        text-align: center; /* Centre le texte en dessous de l'icône */
+    }
 }
 
 .desktop-navbar {
