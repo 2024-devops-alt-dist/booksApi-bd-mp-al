@@ -1,7 +1,7 @@
 .loginpage {
     width: 100vw;
     height: 100vh;
-    background-image: url(resources/media/images/pexels-inga-sv-3139361.jpg);
+    background-image: url("resources/media/images/pexels-inga-sv-3139361.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
