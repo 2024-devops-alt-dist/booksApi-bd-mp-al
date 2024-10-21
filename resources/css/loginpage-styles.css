@@ -25,6 +25,8 @@
     &::before { background-color: var(--white-typo); }
 
     /* top page of login */
+    .exit-button { --_exit-button-color: var(--third-color); }
+    
     .top-loginpage {
         z-index: 2;
         display: flex;
@@ -33,18 +35,6 @@
         padding-left: 1.25rem;
         box-sizing: border-box;
 
-        .exit-button {
-            font-family: var(--roboto-font);
-            font-weight: bold;
-            font-size: 2rem;
-            text-decoration: none;
-            color: var(--third-color);
-            cursor: pointer;
-
-            position: absolute;
-            top: 5%;
-            right: 5%;
-        }
 
         .main-title {
             --_card-title-color: var(--third-color);
