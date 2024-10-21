@@ -162,7 +162,7 @@
                             position: relative;
                             text-decoration: none;
                             font-size: 1.25rem;
-                            font-family: var(--roboto-font);
+                            font-family: var(--inter-font);
                             color: var(--primary-color);
 
                             &::before {
@@ -179,6 +179,10 @@
                             &:hover::before {
                                 margin-left: 100%;
                                 transition: ease-in-out .3s;
+                            }
+
+                            &:hover {
+                                color: var(--white-typo);
                             }
 
                         }
