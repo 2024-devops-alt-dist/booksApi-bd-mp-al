@@ -218,6 +218,14 @@ h2 {
 margin-bottom: 8rem;
 }
 
+.no-decoration-link{
+    text-decoration: none;
+    width: 100%;
+    display: flex;                  
+    justify-content: center;        
+    align-items: center;  
+}
+
 /* Media query pour les écrans tablette ou smartphone */
 @media only screen and (max-width: 768px) {
     
@@ -304,12 +312,6 @@ margin-bottom: 8rem;
     color: var(--primary-color);
 }
 
-.navbar-list {
-    display: flex;
-    gap: 1.8rem;
-    list-style: none;
-}
-
 .navbar-left .navbar-logo {
     width: 3.125rem; 
 }
@@ -318,16 +320,53 @@ margin-bottom: 8rem;
     width: 5rem; 
 }
 
-.navbar-list a {
-    text-decoration: none; 
-    color: var(--primary-color); 
-    font-family: var(--inter-font); 
-    font-size: 1.5rem; 
-    transition: color 0.3s; 
-}
+.form-nav {
+    display: block;
+    
+    ul {
+        width: 100%;
+        height: 3.75rem;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
 
-.navbar-list a:hover {
-    color: var(--white-typo);
+        li {
+            box-sizing: border-box;
+            padding-top: 1rem;
+            list-style: none;
+            overflow: hidden;
+
+            a {
+                position: relative;
+                text-decoration: none;
+                font-size: 1.25rem;
+                font-family: var(--inter-font);
+                color: var(--primary-color);
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: .16125rem;
+                    position: absolute;
+                    bottom: -.3125rem;
+                    left: 0;
+                    background-color: var(--primary-color);
+                }
+
+                &:hover::before {
+                    margin-left: 100%;
+                    transition: ease-in-out .3s;
+                    background-color: var(--white-typo);
+                }
+
+                &:hover {
+                    color: var(--white-typo);
+                }
+
+            }
+        }
+    }
 }
 
 .banner {
