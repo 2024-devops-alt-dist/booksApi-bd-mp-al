@@ -62,23 +62,23 @@
 
             
             .icon1 {
-                background-image: url(/resources/media/icons/icons8-book-50.png);
+                background-image: url(resources/media/icons/icons8-book-50.png);
             }
-            .icon2 { background-image: url(/resources/media/icons/icons8-board-64.png); }
-            .icon3 { background-image: url(/resources/media/icons/icons8-business-48.png); }
+            .icon2 { background-image: url(resources/media/icons/icons8-board-64.png); }
+            .icon3 { background-image: url(resources/media/icons/icons8-business-48.png); }
             .icon4 {
                 top: calc(50%/4);
                 left: calc(50%/4);
-                background-image: url(/resources/media/icons/icons8-trophy-100.png);
+                background-image: url(resources/media/icons/icons8-trophy-100.png);
             }
             .icon5 {
                 left: -1.25rem;
                 margin-right: auto;
-                background-image: url(/resources/media/icons/icons8-degree-100.png);
+                background-image: url(resources/media/icons/icons8-degree-100.png);
             }
-            .icon6 { background-image: url(/resources/media/icons/icons8-truck-100.png); }
-            .icon7 { background-image: url(/resources/media/icons/icons8-windmill-60.png); }
-            .icon8 { background-image: url(/resources/media/icons/icons8-shovel-48.png); }
+            .icon6 { background-image: url(resources/media/icons/icons8-truck-100.png); }
+            .icon7 { background-image: url(resources/media/icons/icons8-windmill-60.png); }
+            .icon8 { background-image: url(resources/media/icons/icons8-shovel-48.png); }
 
             .icon4,
             .icon5 {
