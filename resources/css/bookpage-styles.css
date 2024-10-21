@@ -1,0 +1,111 @@
+.bookpage {
+    width: 100vw;
+    box-sizing: border-box;
+    background: linear-gradient(127deg, var(--secondary-color), var(--third-color) 70.71%),
+    linear-gradient(336deg, var(--white-typo), var(--primary-color) 70.71%),
+    linear-gradient(217deg, var(--primary-color), var(--secondary-color) 70.71%);
+
+    .exit-button { --_exit-button-color: var(--primary-color); }
+
+    .banner-book {
+        margin: 6rem 0 0;
+        width: 100%;
+
+        img { width: 100%; }
+
+        .book-caption {
+            --_card-title-color: var(--primary-color);
+            --_card-title-font: var(--jua-font);
+            font-size: 1.25rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    main {
+
+        header {
+            box-sizing: border-box;
+            margin: 2rem auto;
+            width: 90%;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            h2 {
+                --_card-text-color: var(--secondary-color);
+                margin: .625rem 0;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            h3 {
+                --_card-text-color: var(--primary-color);
+                margin: 0;
+            }
+
+            .mark-options-container {
+                svg {
+                    width: 1.4375rem;
+                    height: 1.4375rem;
+                    fill: none;
+                }
+
+                svg + svg { margin: .85rem 0; }
+                :not(svg + svg) { margin: .625rem 0; }
+            }
+        }
+
+        .book-summary {
+            width: 90%;
+            margin: 0 auto;
+
+            --_card-title-font: var(--jua-font);
+            --_card-title-color: var(--primary-color);
+            font-size: .9rem;
+            line-height: 1.5rem;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 5%;
+            left: 5%;
+            width: 90%;
+
+            display: flex;
+            gap: 1.25rem;
+
+            .simple-button {
+                --_button-bg-color: var(--secondary-color);
+                opacity: 1;
+            }
+
+            .borrow {
+                --_simple-button-width: 9.5rem;
+                --_card-text-color: var(--white-typo);
+                font-size: 1.25rem;
+                font-weight: bold;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            .icon {
+                fill: none;
+                position: relative;
+
+                & > * {
+                    position: absolute;
+                    transform: translate(20%, 15%);
+                }
+            }
+
+            svg:not(svg + svg) {
+                margin-left: auto;
+            }
+        }
+    } 
+}

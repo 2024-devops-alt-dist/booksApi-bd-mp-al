@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../resources/css/welcomepage-styles.css">
     <link rel="stylesheet" href="/resources/css/button-styles.css">
     <link rel="stylesheet" href="/resources/css/loginpage-styles.css">
+    <link rel="stylesheet" href="/resources/css/bookpage-styles.css">
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,47 +23,52 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
-<body>
-    <a class="exit-button" href="../index.html">×</a>
-    <figure>
+<body class="bookpage">
+    <a class="exit-button" href="../static/storypage.html">×</a>
+    <figure class="banner-book">
         <img src="/resources/media/images/image-placeholder.png" alt="cover image of a book">
-        <figcaption>This book is an incredible story that is going to make you dream</figcaption>
+        <figcaption class="card-title-font book-caption">This book is an incredible story that is going to make you dream</figcaption>
     </figure>
 
     <main>
         <header>
-            <h2>Emily Bishop</h2>
-            <h3>Today - 7 min read</h3>
+            <section>
+                <h2 class="card-text-font">Emily Bishop</h2>
+                <h3 class="card-text-font">Today - 7 min read</h3>
+            </section>
 
-            <div class="mark-options-container">
-                <svg width="27" height="27" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.46143 23.2551V5.86735C5.46143 5.26964 5.67403 4.75797 6.09924 4.33233C6.52444 3.9067 7.0356 3.69388 7.6327 3.69388H18.489C19.0861 3.69388 19.5973 3.9067 20.0225 4.33233C20.4477 4.75797 20.6603 5.26964 20.6603 5.86735V23.2551L13.0609 19.9949L5.46143 23.2551ZM7.6327 19.9406L13.0609 17.6041L18.489 19.9406V5.86735H7.6327V19.9406Z" fill="#6640BD"/>
-                </svg>
-                <svg width="5" height="19" xmlns="http://www.w3.org/2000/svg">
+            <section class="mark-options-container">
+                <svg viewbox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.4585 18.1684C1.8614 18.1684 1.35025 17.9555 0.925042 17.5299C0.499835 17.1043 0.287231 16.5926 0.287231 15.9949C0.287231 15.3972 0.499835 14.8855 0.925042 14.4599C1.35025 14.0342 1.8614 13.8214 2.4585 13.8214C3.0556 13.8214 3.56675 14.0342 3.99196 14.4599C4.41717 14.8855 4.62977 15.3972 4.62977 15.9949C4.62977 16.5926 4.41717 17.1043 3.99196 17.5299C3.56675 17.9555 3.0556 18.1684 2.4585 18.1684ZM2.4585 11.648C1.8614 11.648 1.35025 11.4351 0.925042 11.0095C0.499835 10.5839 0.287231 10.0722 0.287231 9.47449C0.287231 8.87678 0.499835 8.36511 0.925042 7.93947C1.35025 7.51384 1.8614 7.30102 2.4585 7.30102C3.0556 7.30102 3.56675 7.51384 3.99196 7.93947C4.41717 8.36511 4.62977 8.87678 4.62977 9.47449C4.62977 10.0722 4.41717 10.5839 3.99196 11.0095C3.56675 11.4351 3.0556 11.648 2.4585 11.648ZM2.4585 5.12755C1.8614 5.12755 1.35025 4.91473 0.925042 4.48909C0.499835 4.06345 0.287231 3.55178 0.287231 2.95408C0.287231 2.35637 0.499835 1.8447 0.925042 1.41907C1.35025 0.993428 1.8614 0.780609 2.4585 0.780609C3.0556 0.780609 3.56675 0.993428 3.99196 1.41907C4.41717 1.8447 4.62977 2.35637 4.62977 2.95408C4.62977 3.55178 4.41717 4.06345 3.99196 4.48909C3.56675 4.91473 3.0556 5.12755 2.4585 5.12755Z" fill="#6640BD"/>
                 </svg>
-            </div>
+                <svg viewbox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.46143 23.2551V5.86735C5.46143 5.26964 5.67403 4.75797 6.09924 4.33233C6.52444 3.9067 7.0356 3.69388 7.6327 3.69388H18.489C19.0861 3.69388 19.5973 3.9067 20.0225 4.33233C20.4477 4.75797 20.6603 5.26964 20.6603 5.86735V23.2551L13.0609 19.9949L5.46143 23.2551ZM7.6327 19.9406L13.0609 17.6041L18.489 19.9406V5.86735H7.6327V19.9406Z" fill="#6640BD"/>
+                </svg>
+            </section>
         </header>
 
         <section>
-            <p>
+            <p class="card-title-font book-summary">
                 "Head in the Clouds" is a whimsical journey into the life of a dreamer,
                 someone whose head is often lost in a world of imagination while their feet remain grounded in reality.
                 The protagonist embarks on a series of heartwarming adventures,
                 balancing a desire for creativity and freedom with the pressures of everyday life.
                 Through vivid storytelling and touching reflections,
                 this novel invites readers to question the boundaries between dreams and responsibilities.
-                It is a celebration of imagination, courage, and the quiet strength needed to remain true to oneself in a world
+                It is a celebration of imagination, courage, and the quiet strength needed to remain true to oneself in a world that often demands conformity.
+                As the protagonist navigates both internal and external challenges,
+                they learn that embracing their dreams can be a source of resilience, not escapism.
+                Ultimately, "Head in the Clouds" reminds us that staying connected to our inner world can lead to profound growth and unexpected real-world transformations.
             </p>
         </section>
 
         <footer>
-            <a href="#">Borrow</a>
-            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.75 22.5V15C3.75 12.0163 4.93526 9.15483 7.04505 7.04505C9.15483 4.93526 12.0163 3.75 15 3.75C17.9837 3.75 20.8452 4.93526 22.955 7.04505C25.0647 9.15483 26.25 12.0163 26.25 15V22.5M26.25 23.75C26.25 24.413 25.9866 25.0489 25.5178 25.5178C25.0489 25.9866 24.413 26.25 23.75 26.25H22.5C21.837 26.25 21.2011 25.9866 20.7322 25.5178C20.2634 25.0489 20 24.413 20 23.75V20C20 19.337 20.2634 18.7011 20.7322 18.2322C21.2011 17.7634 21.837 17.5 22.5 17.5H26.25V23.75ZM3.75 23.75C3.75 24.413 4.01339 25.0489 4.48223 25.5178C4.95107 25.9866 5.58696 26.25 6.25 26.25H7.5C8.16304 26.25 8.79893 25.9866 9.26777 25.5178C9.73661 25.0489 10 24.413 10 23.75V20C10 19.337 9.73661 18.7011 9.26777 18.2322C8.79893 17.7634 8.16304 17.5 7.5 17.5H3.75V23.75Z" stroke="#EDE8F7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="#" class="simple-button borrow card-text-font">Borrow</a>
+            <svg class="simple-button icon" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 22.5V15C3.75 12.0163 4.93526 9.15483 7.04505 7.04505C9.15483 4.93526 12.0163 3.75 15 3.75C17.9837 3.75 20.8452 4.93526 22.955 7.04505C25.0647 9.15483 26.25 12.0163 26.25 15V22.5M26.25 23.75C26.25 24.413 25.9866 25.0489 25.5178 25.5178C25.0489 25.9866 24.413 26.25 23.75 26.25H22.5C21.837 26.25 21.2011 25.9866 20.7322 25.5178C20.2634 25.0489 20 24.413 20 23.75V20C20 19.337 20.2634 18.7011 20.7322 18.2322C21.2011 17.7634 21.837 17.5 22.5 17.5H26.25V23.75ZM3.75 23.75C3.75 24.413 4.01339 25.0489 4.48223 25.5178C4.95107 25.9866 5.58696 26.25 6.25 26.25H7.5C8.16304 26.25 8.79893 25.9866 9.26777 25.5178C9.73661 25.0489 10 24.413 10 23.75V20C10 19.337 9.73661 18.7011 9.26777 18.2322C8.79893 17.7634 8.16304 17.5 7.5 17.5H3.75V23.75Z" stroke="#F9F7FE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0625 22.2812L15 19.9062L18.9375 22.3125L17.9062 17.8125L21.375 14.8125L16.8125 14.4063L15 10.1562L13.1875 14.375L8.625 14.7812L12.0938 17.8125L11.0625 22.2812ZM7.28125 27.5L9.3125 18.7188L2.5 12.8125L11.5 12.0312L15 3.75L18.5 12.0312L27.5 12.8125L20.6875 18.7188L22.7188 27.5L15 22.8438L7.28125 27.5Z" fill="#EDE8F7"/>
+            <svg class="simple-button icon" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0625 22.2812L15 19.9062L18.9375 22.3125L17.9062 17.8125L21.375 14.8125L16.8125 14.4063L15 10.1562L13.1875 14.375L8.625 14.7812L12.0938 17.8125L11.0625 22.2812ZM7.28125 27.5L9.3125 18.7188L2.5 12.8125L11.5 12.0312L15 3.75L18.5 12.0312L27.5 12.8125L20.6875 18.7188L22.7188 27.5L15 22.8438L7.28125 27.5Z" fill="#F9F7FE"/>
             </svg> 
         </footer>
     </main>
