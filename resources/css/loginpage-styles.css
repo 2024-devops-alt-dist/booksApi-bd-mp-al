@@ -1,0 +1,195 @@
+.loginpage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("resources/media/images/pexels-inga-sv-3139361.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .5;
+    }
+
+    &::after { background-color: var(--primary-color); }
+    &::before { background-color: var(--white-typo); }
+
+    /* top page of login */
+    .exit-button { --_exit-button-color: var(--third-color); }
+    
+    .top-loginpage {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1.25rem;
+        box-sizing: border-box;
+
+        .main-title {
+            --_card-title-color: var(--third-color);
+            --_card-title-font: var(--inter-font);
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .card-text-font {
+            --_card-text-color: var(--third-color);
+            font-size: 1.75rem;
+            width: 90%;
+            margin: 1.25rem 0;
+        }
+
+        img {
+            width: 4rem;
+            height: auto;
+            background-color: var(--primary-color);
+            border-radius: var(--app-icon-border-radius);
+        }
+    }
+
+    /* user login form */
+    .login-form {
+        z-index: 2;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 5%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+
+        .form-nav { display: none; }
+
+        .user-infos {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: .625rem;
+
+            input {
+                height: 2.5rem;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid var(--white-typo);
+
+                &::placeholder {
+                    color: var(--third-color);
+                    font-family: var(--inter-font);
+                    font-weight: bold;
+                }
+            }
+
+            .forgot-pw {
+                font-size: .625rem;
+                text-decoration: none;
+                font-family: var(--inter-font);
+                color: var(--white-typo);
+                text-align: right;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+        }
+
+        .login,
+        .signup { --_simple-button-width: 100%; }
+        
+        .login {
+            --_button-bg-color: var(--white-typo);
+            a { --_button-title-color: var(--primary-color); }
+        }
+
+        .signup {
+            border-top: 1px solid var(--white-typo);
+            a { --_button-title-color: var(--white-typo); }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .loginpage {
+        flex-wrap: nowrap;
+        background-size: 50% 100%;
+        background-position: unset;
+
+        .exit-button { display: none; }
+
+        .top-loginpage {
+            justify-content: unset;
+            margin: auto 0;
+            padding: 0 5%;
+            width: 50%;
+        }
+
+        .login-form {
+            width: 50%;
+
+            .form-nav {
+                display: block;
+                
+                ul {
+                    width: 50%;
+                    height: 3.75rem;
+                    position: fixed;
+                    top: 0;
+                    left: 50%;
+                    padding: 0;
+
+                    display: flex;
+                    justify-content: center;
+                    gap: 2.5rem;
+
+                    li {
+                        box-sizing: border-box;
+                        padding-top: 1rem;
+                        list-style: none;
+                        overflow: hidden;
+
+                        a {
+                            position: relative;
+                            text-decoration: none;
+                            font-size: 1.25rem;
+                            font-family: var(--inter-font);
+                            color: var(--primary-color);
+
+                            &::before {
+                                content: '';
+                                width: 100%;
+                                height: .16125rem;
+                                position: absolute;
+                                bottom: -.3125rem;
+                                left: 0;
+                                background-color: var(--primary-color);
+                                
+                            }
+
+                            &:hover::before {
+                                margin-left: 100%;
+                                transition: ease-in-out .3s;
+                            }
+
+                            &:hover {
+                                color: var(--white-typo);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
