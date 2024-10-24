@@ -69,14 +69,46 @@ function displayBooks(books) {
 	books.forEach((book) => {
 		console.log(book);
 		const sectionSearch = document.getElementById("books-list");
+		const cardLink = document.createElement("a"); // anchor tag for each book
+		cardLink.href = "#"; // temp href
+		cardLink.classList.add("book-card-link");
+
 		const card = document.createElement("article");
 		card.classList.add("books-card");
+
+		// Add unique ID to each card
+		const uniqueId = `book_card_${Math.random()
+			.toString(36)
+			.substring(7)}`;
+		card.id = uniqueId;
+
 		const title = document.createElement("p");
 		title.textContent = book.volumeInfo.title;
+
 		const thumbnail = document.createElement("img");
-		thumbnail.src = book.volumeInfo.imageLinks.thumbnail;
-		sectionSearch.appendChild(card);
+		thumbnail.src = book.volumeInfo.imageLinks
+			? book.volumeInfo.imageLinks.thumbnail
+			: "";
+
 		card.appendChild(thumbnail);
 		card.appendChild(title);
+
+		cardLink.appendChild(card); // this will wrap the card with the anchor tag
+
+		sectionSearch.appendChild(cardLink);
+
+		// event listener to handle navigation
+		cardLink.addEventListener("click", (e) => {
+			// e.preventDefault();
+			navigateToBookDetails(
+				book.id || book.volumeInfo.industryIdentifiers[0].identifier
+			);
+		});
 	});
+}
+
+// handle navigation to book details page
+function navigateToBookDetails(bookId) {
+	// Redirect to bookpage.html, passing the book ID as a query parameter
+	window.location.href = `bookpage.html?bookId=${bookId}`;
 }

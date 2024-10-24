@@ -1,3 +1,20 @@
+#books-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.book-card-link {
+	display: inline-block;
+	margin: 20px 25px;
+	transition: transform 0.3s ease-out;
+}
+
+.book-card-link:hover {
+	transform: scale(1.35);
+}
+
 .books-card {
-    
+	/* Remove margin and transition from the card itself */
+	margin: 0;
+	transition: none;
 }
