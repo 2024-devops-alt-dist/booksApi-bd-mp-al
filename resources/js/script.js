@@ -28,21 +28,25 @@ searchButton.addEventListener("click", async function (e) {
 	let query = document.getElementById("search-field").value;
 
 	// --- if user don't put input ---
-	// randomly choose category
-	const randomBookQuery =
-		bookSearchQueries[
-			Math.floor(Math.random() * bookSearchQueries.length)
-		];
 	// if query is empty search for random category
-	if (query === "") query = randomBookQuery;
+	if (query === "") {
+		// randomly choose category
+		const randomBookQuery =
+			bookSearchQueries[
+				Math.floor(Math.random() * bookSearchQueries.length)
+			];
+		// assign random query
+		query = randomBookQuery;
+	}
 
+	console.log("search query:", query);
 	allBooks = await searchBooks(query);
 
 	displayBooks(allBooks);
 });
 
 /**
- * Function to get books by query string (default 'coding')
+ * Function to get books by query string
  */
 async function searchBooks(query) {
 	try {
