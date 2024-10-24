@@ -8,30 +8,47 @@ const booksList = document.getElementById("books-list");
 // Global variable
 let allBooks = null; // create global variable for searchBooks function results
 
+// Feature for random book search
+const bookSearchQueries = [
+	"fiction",
+	"science fiction",
+	"fantasy",
+	"mystery",
+	"biography",
+	"self-help",
+	"history",
+	"children's books",
+	"cookbooks",
+	"graphic novels",
+];
+
 // Event listeners
 searchButton.addEventListener("click", async function (e) {
 	e.preventDefault();
 	let query = document.getElementById("search-field").value;
-	console.log(query);
+
+	// --- if user don't put input ---
+	// randomly choose category
+	const randomBookQuery =
+		bookSearchQueries[
+			Math.floor(Math.random() * bookSearchQueries.length)
+		];
+	// if query is empty search for random category
+	if (query === "") query = randomBookQuery;
 
 	allBooks = await searchBooks(query);
-	// console.log(allBooks);
 
-	// displayBooks(allBooks); //
-	console.log("THE SEARCH BUTTON WAS CLICKED");
+	displayBooks(allBooks);
 });
 
 /**
  * Function to get books by query string (default 'coding')
  */
-async function searchBooks(query = "coding") {
+async function searchBooks(query) {
 	try {
-		const fullUrl = `${url}${encodeURIComponent(query)}`;
-		const response = await fetch(
-			"https://www.googleapis.com/books/v1/volumes?q=test"
-		);
+		const fullUrl = `${url}${query}`;
+		const response = await fetch(fullUrl);
 		const data = await response.json();
-		console.log(data);
 		console.log("All books", data.items);
 		return data.items; // return array of books
 		// booksList = ""; maybe - to clear the list for new search
