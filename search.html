@@ -11,7 +11,7 @@
 
 		<link rel="stylesheet" href="resources/css/styles.css" />
 		<link rel="stylesheet" href="resources/css/homepage-styles.css" />
-		<link rel="stylesheet" href="./resources/css/search-styles.css" />
+        <link rel="stylesheet" href="resources/css/search-styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link
 			rel="preconnect"
@@ -96,16 +96,16 @@
 
 		<main>
 			<!-- Search bar  -->
-			<section id="search">
-				<input
-					type="text"
-					id="search-field"
-					placeholder="search a book... or let us surprise you"
-				/>
+			<section id="search" class="search-section">
+                <div class="search-container">
+                    <img src="resources/media/icons/search-icon.png" alt="Search icon" class="icon-search">
+                    <input type="text" id="search-field" class="input-search" placeholder="Search...">
+                </div>
 				<button type="submit" id="search-button">Search</button>
 			</section>
 
-			<section id="books-list"></section>
+			<section id="books-list-section" class="books-list-section">
+			</section>
 		</main>
 
 		<footer class="footer">

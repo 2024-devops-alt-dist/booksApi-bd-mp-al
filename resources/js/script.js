@@ -3,7 +3,7 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=`;
 
 // DOM access
 const searchButton = document.getElementById("search-button");
-const booksList = document.getElementById("books-list");
+const booksList = document.getElementById("books-list-section");
 
 // Global variable
 let allBooks = null; // create global variable for searchBooks function results
