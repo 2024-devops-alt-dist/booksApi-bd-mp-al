@@ -12,8 +12,12 @@ let allBooks = null; // create global variable for searchBooks function results
 searchButton.addEventListener("click", async function (e) {
 	e.preventDefault();
 	let query = document.getElementById("search-field").value;
-	console.log(query);
+	console.log("query:", query);
 
+	// if user dont put input
+	if (query === "") query = "coding"; // fallback value if input empty
+	// let random = null; // let find random book
+	// query = "" ? (query = random) : (query = query);
 	allBooks = await searchBooks(query);
 	// console.log(allBooks);
 
@@ -26,10 +30,8 @@ searchButton.addEventListener("click", async function (e) {
  */
 async function searchBooks(query = "coding") {
 	try {
-		const fullUrl = `${url}${encodeURIComponent(query)}`;
-		const response = await fetch(
-			"https://www.googleapis.com/books/v1/volumes?q=test"
-		);
+		const fullUrl = `${url}${query}`;
+		const response = await fetch(fullUrl);
 		const data = await response.json();
 		console.log(data);
 		console.log("All books", data.items);
