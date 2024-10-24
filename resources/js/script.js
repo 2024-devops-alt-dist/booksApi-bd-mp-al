@@ -53,11 +53,7 @@ async function searchBooks(query) {
 		const fullUrl = `${url}${query}`;
 		const response = await fetch(fullUrl);
 		const data = await response.json();
-<<<<<<< Updated upstream
 		console.log("All books", data.items);
-=======
-		// console.log("All books", data.items);
->>>>>>> Stashed changes
 		return data.items; // return array of books
 		// booksList = ""; maybe - to clear the list for new search
 	} catch (error) {
@@ -69,19 +65,18 @@ async function searchBooks(query) {
  * Function to display the books fetched with the searchBooks function
  */
 function displayBooks(books) {
-
 	booksList.innerHTML = "";
 	books.forEach((book) => {
 		console.log(book);
-        const sectionSearch = document.getElementById("books-list");
-        const card = document.createElement("article");
-        const title = document.createElement("p");
-        title.textContent= book.volumeInfo.title;
-        const thumbnail = document.createElement("img");
-        thumbnail.src = book.volumeInfo.imageLinks.thumbnail;
-        sectionSearch.appendChild(card);
-        card.appendChild(thumbnail);
-        card.appendChild(title);
+		const sectionSearch = document.getElementById("books-list");
+		const card = document.createElement("article");
+		const title = document.createElement("p");
+		title.textContent = book.volumeInfo.title;
+		const thumbnail = document.createElement("img");
+		thumbnail.src = book.volumeInfo.imageLinks.thumbnail;
+		sectionSearch.appendChild(card);
+		card.appendChild(thumbnail);
+		card.appendChild(title);
 		// const bookElement = document.createElement("li");
 		// bookElement.textContent = `${
 		// 	book.volumeInfo.title
