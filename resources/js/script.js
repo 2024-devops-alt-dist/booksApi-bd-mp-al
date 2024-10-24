@@ -68,7 +68,6 @@ function displayBooks(books) {
 	booksList.innerHTML = ""; // resets the list of books on every search
 	books.forEach((book) => {
 		console.log(book);
-		const sectionSearch = document.getElementById("books-list");
 		const cardLink = document.createElement("a"); // anchor tag for each book
 		cardLink.href = "#"; // temp href
 		cardLink.classList.add("book-card-link");
@@ -95,7 +94,7 @@ function displayBooks(books) {
 
 		cardLink.appendChild(card); // this will wrap the card with the anchor tag
 
-		sectionSearch.appendChild(cardLink);
+		booksList.appendChild(cardLink);
 
 		// event listener to handle navigation
 		cardLink.addEventListener("click", (e) => {
