@@ -49,36 +49,49 @@
 	justify-content: center;
 	gap: 2rem;
 	flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+
+.books-card-link {
+    width: 200px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px gray;
+    text-decoration: unset;
+    margin: 1rem;
+    padding: 20px;
 }
 
 .books-card {
-	width: 200px;
-	height: auto;
-	border-radius: 8px;
-	box-shadow: 0 0 15px gray;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: stretch;
-	padding: 20px;
-	transition: all 0.3s ease-out;
-
-	&:hover {
-		transform: scale(1.1);
-	}
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .books-card img {
-	object-fit: cover;
+    object-fit: cover;
+    height: 320px;
 }
 
 .books-card-title {
-	font-weight: bold;
-	font-family: var(--inter-font);
+    font-weight: bold;
+    font-family: var(--inter-font);
+    text-decoration: none;
+    color: var(--black-typo);
 }
 
 .books-card p {
-	font-family: var(--inter-font);
+    font-family: var(--inter-font);
+    text-decoration: none;
+    color: var(--black-typo);
+    max-height: 40px;
+    overflow: hidden;
 }
 
 .search-button {

@@ -79,7 +79,7 @@ function displayBooks(books) {
 
 		const cardLink = document.createElement("a"); // anchor tag for each book
 		cardLink.href = "#"; // temp href
-		cardLink.classList.add("book-card-link");
+		cardLink.classList.add("books-card-link");
 
 		const card = document.createElement("article");
 		card.classList.add("books-card");
@@ -96,6 +96,7 @@ function displayBooks(books) {
 
 		card.appendChild(thumbnail);
 		card.appendChild(title);
+		card.appendChild(author);
 
 		cardLink.appendChild(card); // this will wrap the card with the anchor tag
 
