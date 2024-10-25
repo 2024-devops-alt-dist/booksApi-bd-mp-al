@@ -52,7 +52,7 @@
 			justify-content: space-between;
 
 			h2 {
-				--_card-text-color: var(--secondary-color);
+				--_card-text-color: var(--primary-color);
 				margin: 0.625rem 0;
 				font-weight: bold;
 				font-size: 1rem;
