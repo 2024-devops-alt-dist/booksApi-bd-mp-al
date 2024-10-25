@@ -60,11 +60,6 @@ async function searchBooks(query) {
 		const fullUrl = `${url}${query}${limit}`;
 		const response = await fetch(fullUrl);
 
-		// if (!response.ok) {
-		// 	throw new Error(
-		// 		`CUSTOM: HTTP error! status: ${response.status}`
-		// 	);
-		// }
 		const data = await response.json();
 		console.log(data);
 		return data.docs; // return array of books
@@ -81,6 +76,8 @@ function displayBooks(books) {
 	books.forEach((book) => {
 		console.log(book);
 		const coverId = book.cover_i;
+
+		console.log("book", book.key);
 
 		const cardLink = document.createElement("a"); // anchor tag for each book
 		cardLink.href = "#"; // temp href
@@ -109,9 +106,7 @@ function displayBooks(books) {
 		// event listener to handle navigation
 		cardLink.addEventListener("click", (e) => {
 			e.preventDefault();
-			navigateToBookDetails(
-				book.id || book.volumeInfo.industryIdentifiers[0].identifier
-			);
+			navigateToBookDetails(book.key);
 		});
 	});
 }
