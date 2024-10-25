@@ -77,8 +77,6 @@ function displayBooks(books) {
 		console.log(book);
 		const coverId = book.cover_i;
 
-		console.log("book", book.key);
-
 		const cardLink = document.createElement("a"); // anchor tag for each book
 		cardLink.href = "#"; // temp href
 		cardLink.classList.add("book-card-link");
