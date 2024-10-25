@@ -67,7 +67,7 @@ async function searchBooks(query) {
 		// }
 		const data = await response.json();
 		console.log(data);
-		return data.items; // return array of books
+		return data.docs; // return array of books
 	} catch (error) {
 		console.error("CUSTOM: Error fetching books:", error.message);
 	}
@@ -80,6 +80,8 @@ function displayBooks(books) {
 	booksList.innerHTML = ""; // resets the list of books on every search
 	books.forEach((book) => {
 		console.log(book);
+		const coverId = book.cover_i;
+
 		const cardLink = document.createElement("a"); // anchor tag for each book
 		cardLink.href = "#"; // temp href
 		cardLink.classList.add("book-card-link");
@@ -89,15 +91,13 @@ function displayBooks(books) {
 
 		const title = document.createElement("p");
 		title.classList.add("books-card-title");
-		title.textContent = book.volumeInfo.title;
+		title.textContent = book.title;
 
 		const author = document.createElement("p");
-		author.textContent = book.volumeInfo.authors[0];
+		author.textContent = book.author_name;
 
 		const thumbnail = document.createElement("img");
-		thumbnail.src = book.volumeInfo.imageLinks
-			? book.volumeInfo.imageLinks.thumbnail
-			: "";
+		thumbnail.src = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
 
 		card.appendChild(thumbnail);
 		card.appendChild(title);
