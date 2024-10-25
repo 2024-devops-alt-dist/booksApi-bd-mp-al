@@ -20,9 +20,12 @@
 }
 
 .search-section {
+	height: 612px;
+	background-image: url("../media/images/banner.png");
+	background-size: cover;
 	display: flex;
 	justify-content: center;
-	padding: 3rem 0;
+	align-items: center;
 }
 
 .search-container {
@@ -54,7 +57,7 @@
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
-    padding-bottom: 4rem;
+    padding: 4rem;
 }
 
 .books-card-link {
@@ -65,6 +68,7 @@
     text-decoration: unset;
     margin: 1rem;
     padding: 20px;
+	z-index: 1;
 	transition: all 0.3s ease-out;
     &:hover {
         transform: scale(1.1);
