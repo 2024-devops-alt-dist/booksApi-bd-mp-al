@@ -25,7 +25,7 @@ const bookSearchQueries = [
 // Event listeners
 searchButton.addEventListener("click", async function (e) {
 	e.preventDefault();
-	let query = document.getElementById("search-field").value;
+	let query = document.getElementById("search-field").value.trim();
 
 	// --- if user don't put input ---
 	// if query is empty search for random category
@@ -89,12 +89,6 @@ function displayBooks(books) {
 
 		const card = document.createElement("article");
 		card.classList.add("books-card");
-
-		// Add unique ID to each card
-		const uniqueId = `book_card_${Math.random()
-			.toString(36)
-			.substring(7)}`;
-		card.id = uniqueId;
 
 		const title = document.createElement("p");
 		title.textContent = book.volumeInfo.title;
