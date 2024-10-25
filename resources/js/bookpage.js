@@ -44,14 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (coverImage) {
 			const coverUrl = book.cover_i
 				? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
-				: "https://stock.adobe.com/search/images?k=no+image+available";
+				: "https://as2.ftcdn.net/v2/jpg/04/70/29/97/1000_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
 
 			coverImage.src = coverUrl;
 			coverImage.alt = `${book.title_suggest || "Book"} cover`;
 
 			// Fallback image
-			coverImage.onerror = function () {
-				this.src = "resources/media/images/image-placeholder.png";
+			coverImage.onerror = () => {
+				this.src =
+					"https://as2.ftcdn.net/v2/jpg/04/70/29/97/1000_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
 			};
 		}
 
