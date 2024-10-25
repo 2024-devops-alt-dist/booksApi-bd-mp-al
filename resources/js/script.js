@@ -8,6 +8,7 @@ const booksList = document.getElementById("books-list-section");
 
 // Global variable
 let allBooks = null; // create global variable for searchBooks function results
+booksList.style.display = "none";
 
 // Feature for random book search
 const bookSearchQueries = [
@@ -72,6 +73,7 @@ async function searchBooks(query) {
  * Function to display the books fetched with the searchBooks function
  */
 function displayBooks(books) {
+	let isEmpty = true;
 	booksList.innerHTML = ""; // resets the list of books on every search
 	books.forEach((book) => {
 		console.log(book);
@@ -107,7 +109,17 @@ function displayBooks(books) {
 			e.preventDefault();
 			navigateToBookDetails(book.key);
 		});
+
+		// If we encounter a book, mark the list as not empty
+		isEmpty = false;
 	});
+
+	// Hide the books list if it's empty after processing all books
+	if (isEmpty) {
+		booksList.style.display = "none";
+	} else {
+		booksList.style.display = "";
+	}
 }
 
 // handle navigation to book details page
