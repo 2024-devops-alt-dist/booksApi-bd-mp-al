@@ -65,6 +65,10 @@
     text-decoration: unset;
     margin: 1rem;
     padding: 20px;
+	transition: all 0.3s ease-out;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .books-card {
@@ -72,6 +76,7 @@
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
+
 }
 
 .books-card img {
