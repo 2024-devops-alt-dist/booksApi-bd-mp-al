@@ -1,5 +1,6 @@
 // API URL
-const url = `https://www.googleapis.com/books/v1/volumes?q=`;
+const url = `https://openlibrary.org/search.json?q=`;
+const limit = `&limit=10`;
 
 // DOM access
 const searchButton = document.getElementById("search-button");
@@ -60,16 +61,16 @@ searchButton.addEventListener("click", async function (e) {
  */
 async function searchBooks(query) {
 	try {
-		const fullUrl = `${url}${query}`;
+		const fullUrl = `${url}${query}${limit}`;
 		const response = await fetch(fullUrl);
 
-		if (!response.ok) {
-			throw new Error(
-				`CUSTOM: HTTP error! status: ${response.status}`
-			);
-		}
+		// if (!response.ok) {
+		// 	throw new Error(
+		// 		`CUSTOM: HTTP error! status: ${response.status}`
+		// 	);
+		// }
 		const data = await response.json();
-		// console.log("All books", data.items);
+		console.log(data);
 		return data.items; // return array of books
 	} catch (error) {
 		console.error("CUSTOM: Error fetching books:", error.message);
@@ -91,7 +92,11 @@ function displayBooks(books) {
 		card.classList.add("books-card");
 
 		const title = document.createElement("p");
+		title.classList.add('books-card-title');
 		title.textContent = book.volumeInfo.title;
+
+		const author = document.createElement("p");
+		author.textContent = book.volumeInfo.authors[0];
 
 		const thumbnail = document.createElement("img");
 		thumbnail.src = book.volumeInfo.imageLinks
