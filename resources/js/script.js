@@ -40,9 +40,19 @@ searchButton.addEventListener("click", async function (e) {
 	}
 
 	console.log("search query:", query);
-	allBooks = await searchBooks(query);
 
-	displayBooks(allBooks);
+	try {
+		allBooks = await searchBooks(query);
+		if (allBooks) {
+			displayBooks(allBooks);
+		} else {
+			console.error(
+				"CUSTOM: No books found or invalid result format"
+			);
+		}
+	} catch (error) {
+		console.error("CUSTOM: Error searching books:", error);
+	}
 });
 
 /**
@@ -52,12 +62,17 @@ async function searchBooks(query) {
 	try {
 		const fullUrl = `${url}${query}`;
 		const response = await fetch(fullUrl);
+
+		if (!response.ok) {
+			throw new Error(
+				`CUSTOM: HTTP error! status: ${response.status}`
+			);
+		}
 		const data = await response.json();
 		// console.log("All books", data.items);
 		return data.items; // return array of books
-		// booksList = ""; maybe - to clear the list for new search
 	} catch (error) {
-		console.error("Error fetching books:", error.message);
+		console.error("CUSTOM: Error fetching books:", error.message);
 	}
 }
 
@@ -98,7 +113,7 @@ function displayBooks(books) {
 
 		// event listener to handle navigation
 		cardLink.addEventListener("click", (e) => {
-			// e.preventDefault();
+			e.preventDefault();
 			navigateToBookDetails(
 				book.id || book.volumeInfo.industryIdentifiers[0].identifier
 			);
