@@ -46,10 +46,6 @@ searchButton.addEventListener("click", async function (e) {
 		allBooks = await searchBooks(query);
 		if (allBooks) {
 			displayBooks(allBooks);
-		} else {
-			console.error(
-				"CUSTOM: No books found or invalid result format"
-			);
 		}
 	} catch (error) {
 		console.error("CUSTOM: Error searching books:", error);
@@ -92,7 +88,7 @@ function displayBooks(books) {
 		card.classList.add("books-card");
 
 		const title = document.createElement("p");
-		title.classList.add('books-card-title');
+		title.classList.add("books-card-title");
 		title.textContent = book.volumeInfo.title;
 
 		const author = document.createElement("p");
